@@ -1,0 +1,22 @@
+{
+  "customers": [
+    {
+      "id": 2,
+      "name": "New Name for her",
+      "email": "new@g.com",
+      "age": 50
+    },
+    {
+      "id": 3,
+      "name": "Sara Phis",
+      "email": "SP@gmail.com",
+      "age": 23
+    },
+    {
+      "name": "Tunde Endut",
+      "email": "tunde@gmail.com",
+      "age": 23,
+      "id": 4
+    }
+  ]
+}
