@@ -2,23 +2,18 @@
 
 const Mutations = require('./mutations/mutation');
 const Query = require('./query/query');
+const qf = require('./query_fields/query_fields')
+const mf = require('../schema/mutation_fields/mutation_fields');
 const { GraphQLObjectType, GraphQLSchema, } = require('graphql')
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
-    fields: {
-        customer: Query.customer(),
-        customers: Query.customers()
-    }
+    fields: qf
 })
 
 const mutation = new GraphQLObjectType({
     name: 'Mutation',
-    fields: {
-        addCustomer: Mutations.addCustomer(),
-        deleteCustomer: Mutations.deleteCustomer(),
-        editCustomer: Mutations.editCustomer()
-    }
+    fields: mf
 })
 
 module.exports = new GraphQLSchema({
